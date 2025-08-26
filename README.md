@@ -37,7 +37,7 @@ A estrutura de diretórios deve ser mantida para que o Inno Setup encontre corre
 └─ GP/                          # Instaladores da VPN GlobalProtect
    ├─ GlobalProtect64.msi
    └─ GlobalProtect.msi
-
+```
 
 > ⚠️ Importante: mantenha essa estrutura ao clonar o repositório para que a compilação no Inno Setup funcione corretamente.
 
