@@ -15,10 +15,28 @@ Este repositório contém o instalador do **SIE Remoto UFSM (mts60)**, desenvolv
 
 ## 📂 Estrutura
 
+A estrutura de diretórios deve ser mantida para que o Inno Setup encontre corretamente os arquivos:
+
 - `sie.iss` → Script do Inno Setup que gera o instalador.
 - `SIE\` → Arquivos necessários para execução do SIE.
 - `GP\` → Instaladores do GlobalProtect (32 e 64 bits).
 - `Imagens\` → Imagens utilizadas para o instalador.
+
+/
+├─ sie.iss
+├─ Imagens/
+│  ├─ WizardImageFileNTI.bmp
+│  ├─ WizardSmallImageFileNTI.bmp
+│  └─ icon-install-nti1.ico
+├─ SIE/
+│  ├─ SIE.bat
+│  ├─ sie.ico
+│  └─ SIE.rdp
+└─ GP/
+   ├─ GlobalProtect64.msi
+   └─ GlobalProtect.msi
+
+> ⚠️ Importante: mantenha essa estrutura ao clonar o repositório para que a compilação no Inno Setup funcione corretamente.
 
 ## 🖥️ Requisitos
 
