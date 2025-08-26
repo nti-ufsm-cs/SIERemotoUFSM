@@ -18,6 +18,7 @@ Este repositório contém o instalador do **SIE Remoto UFSM (mts60)**, desenvolv
 - `sie.iss` → Script do Inno Setup que gera o instalador.
 - `SIE\` → Arquivos necessários para execução do SIE.
 - `GP\` → Instaladores do GlobalProtect (32 e 64 bits).
+- `Imagens\` → Imagens utilizadas para o instalador.
 
 ## 🖥️ Requisitos
 
