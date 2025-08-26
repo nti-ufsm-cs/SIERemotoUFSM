@@ -1,4 +1,5 @@
 ; Instalador SIE Remoto UFSM (mts60)
+; 1.3 - Versão ajustada para github. Alterada estrutura de pastas apenas
 ; 1.2 - Remove instalador após instalação (na primeira execução)
 ; - Instala arquivos do SIE e configura atalhos
 ; - Exclui atalhos relacionados ao SIE (apenas .rdp) no desktop de todos os usuários
@@ -7,7 +8,7 @@
 [Setup]
 AppName=SIE Remoto UFSM (mts60)
 AppId=SIE_Remoto_UFSM
-AppVersion=1.2
+AppVersion=1.3
 AppPublisher=NTI UFSM-CS
 AppPublisherURL=https://www.ufsm.br/unidades-universitarias/cachoeira-do-sul/nucleo-de-tecnologia-da-informacao
 DefaultDirName={autopf}\UFSM\CS\SIE_Remoto_mts60
@@ -19,27 +20,26 @@ SolidCompression=yes
 ArchitecturesAllowed=x86 x64compatible
 ArchitecturesInstallIn64BitMode=x64compatible
 PrivilegesRequired=admin
-;PrivilegesRequiredOverridesAllowed=dialog
-;PrivilegesRequired=lowest
-;SetupLogging=yes
 UninstallDisplayName=SIE Remoto UFSM (mts60)
 UninstallDisplayIcon={app}\sie.ico
-SetupIconFile=C:\Users\pcorr\OneDrive\Desktop\SIE_mts60\SIE_mts60\SIE\icon-install-nti1.ico
-WizardImageFile=C:\Users\pcorr\OneDrive\Desktop\SIE_mts60\SIE_mts60\WizardImageFileNTI.bmp
-WizardSmallImageFile=C:\Users\pcorr\OneDrive\Desktop\SIE_mts60\SIE_mts60\WizardSmallImageFileNTI.bmp
+SetupIconFile=Imagens\icon-install-nti1.ico
+WizardImageFile=Imagens\WizardImageFileNTI.bmp
+WizardSmallImageFile=Imagens\WizardSmallImageFileNTI.bmp
 
 [Languages]
 Name: "BrazilianPortuguese"; MessagesFile: "compiler:Languages\BrazilianPortuguese.isl"
 
 [Files]
 ; Arquivos comuns para ambas as arquiteturas
-Source: "C:\Users\pcorr\OneDrive\Desktop\SIE_mts60\SIE_mts60\SIE\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs
+Source: "SIE\SIE.bat"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs
+Source: "SIE\sie.ico"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs
+Source: "SIE\SIE.rdp"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs
 
 ; Arquivos para 64-bit (substitua pelo nome real do instalador)
-Source: "C:\Users\pcorr\OneDrive\Desktop\SIE_mts60\SIE_mts60\GP\GlobalProtect64.msi"; DestDir: "{app}"; Check: Is64BitInstallMode;
+Source: "GP\GlobalProtect64.msi"; DestDir: "{app}"; Check: Is64BitInstallMode;
 
 ; Arquivos para 32-bit (substitua pelo nome real do instalador)
-Source: "C:\Users\pcorr\OneDrive\Desktop\SIE_mts60\SIE_mts60\GP\GlobalProtect.msi"; DestDir: "{app}"; Check: not Is64BitInstallMode;
+Source: "GP\GlobalProtect.msi"; DestDir: "{app}"; Check: not Is64BitInstallMode;
 
 [Icons]
 ; Atalho no Desktop para o .bat
