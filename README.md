@@ -22,19 +22,18 @@ A estrutura de diretórios deve ser mantida para que o Inno Setup encontre corre
 - `GP\` → Instaladores do GlobalProtect (32 e 64 bits).
 - `Imagens\` → Imagens utilizadas para o instalador.
 
-/
-├─ sie.iss
-├─ Imagens/
-│  ├─ WizardImageFileNTI.bmp
-│  ├─ WizardSmallImageFileNTI.bmp
-│  └─ icon-install-nti1.ico
-├─ SIE/
-│  ├─ SIE.bat
-│  ├─ sie.ico
-│  └─ SIE.rdp
-└─ GP/
-   ├─ GlobalProtect64.msi
-   └─ GlobalProtect.msi
+├─ sie.iss # Script principal do instalador
+├─ Imagens/ # Recursos visuais do instalador
+│ ├─ WizardImageFileNTI.bmp
+│ ├─ WizardSmallImageFileNTI.bmp
+│ └─ icon-install-nti1.ico
+├─ SIE/ # Arquivos necessários para o sistema SIE
+│ ├─ SIE.bat
+│ ├─ sie.ico
+│ └─ SIE.rdp
+└─ GP/ # Instaladores da VPN GlobalProtect
+  ├─ GlobalProtect64.msi
+  └─ GlobalProtect.msi
 
 > ⚠️ Importante: mantenha essa estrutura ao clonar o repositório para que a compilação no Inno Setup funcione corretamente.
 
